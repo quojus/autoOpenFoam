@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='autoOpenFoam',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     description='eine kleine automatisirung für openfoam',
     long_description=open('README.md').read(),
