@@ -1,1 +1,0 @@
-from .autoOpenFoam import AutoOpenFoam
