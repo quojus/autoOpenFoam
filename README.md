@@ -155,6 +155,7 @@ subprocess.run(["tmux", "send-keys", "-t", "mysession", f"cd {folder_path_docker
         subprocess.run(["tmux", "send-keys", "-t", "mysession", "./run.sh", "C-m"], check=True)
         ```
 4. **Abbrechen**
+   Achtung, der Prozess wird einfach unterbrochen, wenn er später fortgesetzt werden soll, ist manchmal der letzte Zeitschritt nicht vollständig. In AutoOpenFoam habe ich das so gemacht, dass der letzte Zeitschritt gelöscht wird, wenn abgebrochen wird. 
 ```python
 # Sendet das Signal zum Beenden des aktuellen Prozesses in der tmux-Sitzung 'mysession'
 subprocess.run(["tmux", "send-keys", "-t", "mysession", "C-c"], check=True)
