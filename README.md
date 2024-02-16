@@ -145,7 +145,7 @@ subprocess.run(["tmux", "send-keys", "-t", "mysession", "docker attach hydrother
 subprocess.run(["tmux", "send-keys", "-t", "mysession", f"cd {folder_path_docker}", "C-m"], check=True)
 
 ```
-4. **starten** 
+4. **starten:** 
    - direkt starten
         ```python
         subprocess.run(["tmux", "send-keys", "-t", "mysession", "HydrothermalSinglePhaseDarcyFoam_Cpr", "C-m"], check=True)
@@ -154,13 +154,12 @@ subprocess.run(["tmux", "send-keys", "-t", "mysession", f"cd {folder_path_docker
         ```python
         subprocess.run(["tmux", "send-keys", "-t", "mysession", "./run.sh", "C-m"], check=True)
         ```
-4. **Abbrechen**
-   Achtung, der Prozess wird einfach unterbrochen, wenn er später fortgesetzt werden soll, ist manchmal der letzte Zeitschritt nicht vollständig. In AutoOpenFoam habe ich das so gemacht, dass der letzte Zeitschritt gelöscht wird, wenn abgebrochen wird. 
+4. **Abbrechen:** Achtung, der Prozess wird einfach unterbrochen, wenn er später fortgesetzt werden soll, ist manchmal der letzte Zeitschritt nicht vollständig. In AutoOpenFoam habe ich das so gemacht, dass der letzte Zeitschritt gelöscht wird, wenn abgebrochen wird. 
 ```python
 # Sendet das Signal zum Beenden des aktuellen Prozesses in der tmux-Sitzung 'mysession'
 subprocess.run(["tmux", "send-keys", "-t", "mysession", "C-c"], check=True)
 ```
-5. **zurücksetzen (clean.sh)**
+5. **zurücksetzen (clean.sh):**
 ```python
 subprocess.run(["tmux", "send-keys", "-t", "mysession", "./clean.sh", "C-m"], check=True)
 ```
