@@ -1,4 +1,5 @@
-from autoOpenFoam import AutoOpenFoam
+from autoOpenFoam.autoOpenFoam import AutoOpenFoam
+
 import time
 
 def init_my_wert(autoOpenFoam: AutoOpenFoam):
