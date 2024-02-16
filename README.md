@@ -15,7 +15,7 @@ Wenn 'HydrothermalSinglePhaseDarcyFoam' nicht verwendet wird, sollte dies bei de
 Es könnten noch ein paar Kleinigkeiten in der Funktionsbeschreibung enthalten sein, die eingestellt werden können.
 
 ```python
-from autoOpenFoam import AutoOpenFoam
+from autoOpenFoam.autoOpenFoam import AutoOpenFoam
 
 autoOpenFoam = AutoOpenFoam(root_path='/pfad/zu/projekten', projekt_ortner='meinProjekt')
 ```
@@ -53,7 +53,7 @@ autoOpenFoam.set_Parameter(parameterName='wert')
 - funktions_abbruchkreterium: Eine Dict von Funktionen, die als Abbruchkriterien dienen. Diese Funktionen werden regelmäßig während der Simulation überprüft. Wenn eine dieser Funktionen True zurückgibt, wird die Simulation abgebrochen.
 **mit foo**
 ```python
-from autoOpenFoam import AutoOpenFoam
+from autoOpenFoam.autoOpenFoam import AutoOpenFoam
 autoOpenFoam = AutoOpenFoam(root_path='/pfad/zu/projekten', projekt_ortner='meinProjekt')
 
 def meinAbbruchkriterium2(myVar=None) -> bool|str:
